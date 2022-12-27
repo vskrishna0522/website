@@ -1,0 +1,63 @@
+<html> 
+<head>
+<title> RCS | SERVICES </title>
+<img src="./xerox_0.png"  >
+</head>
+<body>
+  <link  rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" >
+
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+	<div class="collapse navbar-collapse">
+		<img src="./newlogo22123.jpg" width="140px" height="40px">
+		<ul class="navbar-nav ml-auto">
+			
+	
+		    <li class="nav-item"><a  href="./index.html" class="nav-link"> Home </a> </li>
+	    
+			<li class="nav-item"><a  href="./aboutus.html" class="nav-link">  About us </a></li>
+	    
+			<li class="nav-item"><a  href="./services.html" class="nav-link"> services </a></li>
+	    
+			<li class="nav-item"><a  href="./contactus.html" class="nav-link"> contact </a></li>
+			
+		</ul>
+
+	</div>
+	</nav>
+<h1 style="background-color:teal;"> <header> We are requesting here to book your service application </header></h1>
+<form>
+    <label>YOUR NAME :</label>
+    <input type="text"  placeholder="please enter your Your name" required="fill name"  /> </br> </br>
+    <label> PH NUMBER: </label>
+    <input type="phone number" tabindex="1" placeholder="please enter your phone number" maxlength="10" required="fill no" /> <br><br>
+    <label>MACHINE COMPLAINT :</label>
+        <textarea cols="40" rows="6" placeholder="please enter your machine complaint properly " required="fill complaint" ></textarea> </br></br>
+        <label> DATE OF COMPLAINT & TIME :</label>
+        <input type="datetime-local" placeholder="select date & time" required="fill time & date" /> </br></br>
+    <input type="submit" value="BOOK SERVICE"/> </BR> </BR>
+
+    <button onclick="getLocation()">USE CURRENT LOCATION</button>
+
+<p id="LOCATION"></p>
+
+<script>
+var x = document.getElementById("LOCATION");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+
+</form>
+
+</body>
+</html>
